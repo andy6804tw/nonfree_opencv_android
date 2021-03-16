@@ -19,6 +19,21 @@ export PATH=$PATH:$NDK_ROOT
 
 > 路徑中的 `userName` 記得替換成系統User名稱
 
+## 3. 更新剛配置的環境變量
+儲存檔案後，輸入以下指令或重啟終端機。環境參數重置生效。
+
+```bash
+source ~/.zshrc
+```
+
+## 4. 測試
+在終端機輸入 `ndk-build` 出現類似下敘即為成功。(因為我們沒有建立NDK配置檔，出現錯誤訊息正常。)
+
+```
+Android NDK: Could not find application project directory !    
+Android NDK: Please define the NDK_PROJECT_PATH variable to point to it. 
+```
+
 # Reference
 - [Tutorial - part 1: Using OpenCV Nonfree Module (SIFT, SURF) in Android NDK Projects](http://web.guohuiwang.com/technical-notes/sift_surf_opencv_android?spm=a2c4e.10696291.0.0.76b719a4BdmPDn)
 - [bkornel/opencv_android_nonfree](https://github.com/bkornel/opencv_android_nonfree)
