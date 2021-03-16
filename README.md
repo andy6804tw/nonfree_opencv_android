@@ -33,7 +33,12 @@ We will first build libnonfree.so, and then show how to use it to build an Andro
 在主目錄下新增 `jni` 資料夾。並新增 `nonfree_init.cpp, precomp.hpp, sift.cpp, surf.cpp`。
 
 ## Step 3: build libnonfree.so
-建立 `Android.mk` 和 `Application.mk`
+建立 `Android.mk` 和 `Application.mk`：
+
+
+首先建立 `Application.mk`。在這支檔案內需要在 `APP_ABI` 標記要轉譯出的CPU類型，常見通常都需要這兩個 `armeabi-v7a`、`x86`。前者是現在手機目前主流架構 `arm7`，後者是給開發者在模擬器上除錯執行用。
+
+直到目前為止，Android 共有7種不同的 cpu 分別為 ARMv5，ARMv7（從2010年起）x86（從2011年起）MIPS（從2012年起）ARMv8，MIPS64 和 x86_64（從2014年起）。為了支援這些 cup 我們就需要包相對應的 so 檔進 apk 裡。
 
 ```
 # Application.mk
@@ -42,6 +47,8 @@ APP_STL := gnustl_static
 APP_CPPFLAGS := -frtti -fexceptions
 APP_PLATFORM := android-15
 ```
+
+這邊要給指定版的的 OpenCV SDK `OpenCV.mk`，以及 `LOCAL_C_INCLUDES` 函式庫。 `LOCAL_SRC_FILES` 即為 jni 資料夾下欲被編譯的 C++ 程式。
 
 ```
 # Android.mk
