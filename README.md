@@ -75,9 +75,9 @@ cd 進入主目錄 `nonfree_opencv_android` 資料夾後，執行 `ndk-build` �
 
 You can easily build any SIFT or SURF applications using those libraries. If you want to use SIFT and SURF in JAVA code in your Android application, you only need to write JNI interfaces for the functions you want to use. you could also use JAVA code to call these functions, just as you did for other modules in OpenCV. Thanks ArthurT for the comments:
 
-```
-"Thank you very much for all the detailed explanation. Maybe what you would need to state more clearly is that for people only wanting to use SIFT and/or SURF via Java without caring about the JNI side (as I did), they need to copy-paste libnonfree.so and libopencv_java.so into their jniLibs folder under the relevant architecture folder (armeabi, armeabi-v7a, mips or x86). libopencv_java needs to be replaced if it is already in the folder(s). After this, static library loading with: System.loadLibrary("opencv_java"); System.loadLibrary("nonfree"); simply works and the job is done."
-```
+
+> "Thank you very much for all the detailed explanation. Maybe what you would need to state more clearly is that for people only wanting to use SIFT and/or SURF via Java without caring about the JNI side (as I did), they need to copy-paste libnonfree.so and libopencv_java.so into their jniLibs folder under the relevant architecture folder (armeabi, armeabi-v7a, mips or x86). libopencv_java needs to be replaced if it is already in the folder(s). After this, static library loading with: System.loadLibrary("opencv_java"); System.loadLibrary("nonfree"); simply works and the job is done."
+
 
 # Reference
 Thanks Guohui Wang's blog posts.
