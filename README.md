@@ -32,9 +32,8 @@ We will first build libnonfree.so, and then show how to use it to build an Andro
 ## Step 2: Create jni folder
 在主目錄下新增 `jni` 資料夾。並新增 `nonfree_init.cpp, precomp.hpp, sift.cpp, surf.cpp`。
 
-## Step 3: build libnonfree.so
+## Step 3: create `Android.mk` & `Application.mk` file
 建立 `Android.mk` 和 `Application.mk`：
-
 
 首先建立 `Application.mk`。在這支檔案內需要在 `APP_ABI` 標記要轉譯出的CPU類型，常見通常都需要這兩個 `armeabi-v7a`、`x86`。前者是現在手機目前主流架構 `arm7`，後者是給開發者在模擬器上除錯執行用。
 
@@ -65,3 +64,6 @@ LOCAL_LDLIBS    += -llog
 LOCAL_SRC_FILES := nonfree_init.cpp sift.cpp surf.cpp
 include $(BUILD_SHARED_LIBRARY)
 ```
+
+## Step 4: build libnonfree.so
+cd 進入主目錄 `nonfree_opencv_android` 資料夾後，執行 `ndk-build` 指令來產生 `libnonfree.so`。
