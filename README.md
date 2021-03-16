@@ -21,3 +21,4 @@ export PATH=$PATH:$NDK_ROOT
 
 # Reference
 - [Tutorial - part 1: Using OpenCV Nonfree Module (SIFT, SURF) in Android NDK Projects](http://web.guohuiwang.com/technical-notes/sift_surf_opencv_android?spm=a2c4e.10696291.0.0.76b719a4BdmPDn)
+- [bkornel/opencv_android_nonfree](https://github.com/bkornel/opencv_android_nonfree)
