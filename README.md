@@ -66,7 +66,7 @@ include $(BUILD_SHARED_LIBRARY)
 ```
 
 ## Step 4: build libnonfree.so
-cd 進入主目錄 `nonfree_opencv_android` 資料夾後，執行 `ndk-build` 指令來產生 `libnonfree.so`。
+cd 進入主目錄 `nonfree_opencv_android` 資料夾後，執行 `ndk-build` 指令來產生 `libnonfree.so`。如果 `NDK` 環境尚未設置的讀者，可以先參考[這邊](https://github.com/andy6804tw/nonfree_opencv_android/blob/main/ndk-env-var-config.md)。
 
 ![](screenshot/demo.gif)
 
