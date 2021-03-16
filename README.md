@@ -18,3 +18,6 @@ export PATH=$PATH:$NDK_ROOT
 ```
 
 > 路徑中的 `userName` 記得替換成系統User名稱
+
+# Reference
+- [Tutorial - part 1: Using OpenCV Nonfree Module (SIFT, SURF) in Android NDK Projects](http://web.guohuiwang.com/technical-notes/sift_surf_opencv_android?spm=a2c4e.10696291.0.0.76b719a4BdmPDn)
