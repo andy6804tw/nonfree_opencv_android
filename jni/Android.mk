@@ -8,7 +8,6 @@ LOCAL_C_INCLUDES:= ./OpenCV-2.4.11-android-sdk/sdk/native/jni/include
 LOCAL_MODULE    := nonfree
 LOCAL_CFLAGS    := -Werror -O3 -ffast-math
 LOCAL_LDLIBS    += -llog
-LOCAL_SRC_FILES := nonfree_init.cpp \
- sift.cpp \
- surf.cpp
+LOCAL_SRC_FILES := nonfree_init.cpp sift.cpp surf.cpp
+
 include $(BUILD_SHARED_LIBRARY)
