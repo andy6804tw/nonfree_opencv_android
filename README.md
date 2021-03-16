@@ -13,3 +13,16 @@ We will first build libnonfree.so, and then show how to use it to build an Andro
 
 ### Step 1: create project, prepare files needed.
 
+
+```
+.
+├── OpenCV-2.4.11-android-sdk
+├── README.md
+└── jni
+   ├── Android.mk
+   ├── Application.mk
+   ├── nonfree_init.cpp
+   ├── precomp.hpp
+   ├── sift.cpp
+   └── surf.cpp
+```
